@@ -11,7 +11,10 @@ module.exports = {
       './components',
       './containers'
     ],
-    alias: {},
+    alias: {
+      actions: './actions/actions.js',
+      reducers: './reducers/reducers.js'
+    },
     extensions: ['', '.js', '.jsx']
   },
   module: {
