@@ -3,11 +3,13 @@ import Food from 'Food';
 
 const FoodList = ({foods}) => {
   return (
-    <ul>
-      {foods.map(food =>
-        <Food key={food.id} {...food}/>
-      )}
-    </ul>
+    <li>
+      <ul>
+        {foods.map(food =>
+          <Food key={food.id} {...food}/>
+        )}
+      </ul>
+    </li>
   );
 };
 
