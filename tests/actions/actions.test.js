@@ -2,6 +2,10 @@ import expect from 'expect';
 import * as  actions from '../../actions/actions';
 
 describe('actions', () => {
+  it('should exist', () => {
+    expect(actions).toExist();
+  });
+
   it('should create an action to add food', () => {
     const name = 'chocolate';
     const fat = 12;
