@@ -10,7 +10,7 @@ export const addFood = (name, fat, carbs, protein) => {
   }
 };
 
-let nextDayId = 0;
+let nextDayId = 1;
 export const nextDay = () => {
   return {
     type: 'NEXT_DAY',
