@@ -10,7 +10,18 @@ const daysReducer = (state = [{id: 0, food:[]}], action) => {
         ...state
       ];
     case 'ADD_FOOD':
-      return state;
+      let newDays = JSON.parse(JSON.stringify(state));
+      const newFoodEntry = {
+        id: action.id,
+        name: action.name,
+        carbs: action.carbs,
+        protein: action.protein,
+        fat: action.fat
+      }
+
+      newDays[0].foods.unshift(newFoodEntry);
+
+      return newDays;
     default:
       return state;
   }
