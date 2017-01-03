@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
-import daysReducer from './days';
-import calorieGoalReducer from './calorieGoal';
+import days from './days';
+import calorieGoal from './calorieGoal';
 
 const smartEatrApp = combineReducers({
-  daysReducer,
-  calorieGoalReducer
+  days,
+  calorieGoal
 });
 
 export default smartEatrApp;

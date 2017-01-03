@@ -1,5 +1,5 @@
 import React from 'react';
-import CalDisplay from 'CalDisplay';
+import GenerateCalDisplay from 'GenerateCalDisplay';
 import DayList from 'DayList';
 
 const SmartEatr = () => {
@@ -72,10 +72,10 @@ const SmartEatr = () => {
 
   return (
     <div>
-      <CalDisplay total={1350} goal={1900} />
+      <GenerateCalDisplay />
       <DayList days={days}/>
     </div>
   );
 };
 
-export default SmartEatr
+export default SmartEatr;

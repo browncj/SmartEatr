@@ -1,5 +1,5 @@
 // The reducer for our array of days
-const daysReducer = (state = [{id: 0, food:[]}], action) => {
+const daysReducer = (state = [{id: 0, foods:[]}], action) => {
   switch(action.type){
     case 'NEXT_DAY':
       return [
