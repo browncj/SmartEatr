@@ -1,4 +1,5 @@
 import React from 'react';
+import SetCal from 'SetCal';
 import GenerateCalDisplay from 'GenerateCalDisplay';
 import DayList from 'DayList';
 
@@ -72,6 +73,7 @@ const SmartEatr = () => {
 
   return (
     <div>
+      <SetCal />
       <GenerateCalDisplay />
       <DayList days={days}/>
     </div>
