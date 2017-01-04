@@ -30,7 +30,11 @@ try {
   calGoal = parseInt(initialCalGoal);
 
   store.dispatch(setDays(days));
-  store.dispatch(setCalorieGoal(calGoal));
+
+  // Check if calGoal is a valid int before dispatching
+  if(typeof calGoal === 'number' && calGoal % 1 === 0){
+    store.dispatch(setCalorieGoal(calGoal));
+  }
 } catch (e) {
 }
 

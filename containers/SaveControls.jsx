@@ -12,6 +12,8 @@ let saveControls = React.createClass({
     this.props.dispatch(setDays(defaultDays));
     this.props.dispatch(setCalorieGoal(defaultCalGoal));
 
+    localStorage.clear();
+
     alert('Data deleted from local storage');
   },
   render: function(){
