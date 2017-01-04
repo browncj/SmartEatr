@@ -5,7 +5,20 @@ var webpack = require('webpack');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  entry: './index.jsx',
+  entry: [
+    'script!jquery/dist/jquery.min.js',
+    'script!foundation-sites/dist/foundation.min.js',
+    './index.jsx',
+  ],
+  externals: {
+    jquery: 'jQuery'
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
   // plugins: [
   //   new webpack.optimize.UglifyJsPlugin({
   //     compressor: {

@@ -11,7 +11,10 @@ let store = createStore(smartEatrApp,
 store.subscribe(() => {
   let state = store.getState();
   console.log('New state', JSON.stringify(state));
-})
+});
+
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
 
 ReactDOM.render(
   <Provider store={store}>
