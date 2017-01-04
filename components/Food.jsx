@@ -4,7 +4,7 @@ const Food = ({name, carbs, fat, protein}) => {
   let totalCalories = (4*carbs) + (4*protein) + (9*fat);
 
   let style = {
-    "font-size": "12px"
+    "fontSize": "12px"
   };
 
   return (

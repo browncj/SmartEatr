@@ -5,8 +5,8 @@ const DayList = ({days}) => {
   return (
     <ol>
       {days.map(day=>
-        <div>
-          <FoodList key={day.id} {...day} />
+        <div key={day.id}>
+          <FoodList {...day} />
           <hr/>
         </div>
       )}
