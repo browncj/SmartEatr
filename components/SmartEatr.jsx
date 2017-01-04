@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from 'NavBar';
 import NewDay from 'NewDay';
 import SetCal from 'SetCal';
 import AddFood from 'AddFood';
@@ -9,6 +10,7 @@ const SmartEatr = () => {
 
   return (
     <div>
+      <NavBar />
       <NewDay />
       <AddFood />
       <SetCal />

@@ -11,7 +11,7 @@ let newDay = React.createClass({
     return (
       <div>
         <form onSubmit={this.handleClick}>
-          <button>New day</button>
+          <button className="button">New day</button>
         </form>
       </div>
     )

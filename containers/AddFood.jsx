@@ -46,7 +46,7 @@ let AddFood = React.createClass({
           <input type="text" ref="protein" placeholder="Enter protein (g)"/>
           <input type="text" ref="fat" placeholder="Enter fat (g)"/>
           <input type="text" ref="carbs" placeholder="Enter carbs (g)"/>
-          <button>Submit</button>
+          <button className="button">Add new food</button>
         </form>
       </div>
     );
