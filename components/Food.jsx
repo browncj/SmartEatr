@@ -3,10 +3,14 @@ import React from 'react';
 const Food = ({name, carbs, fat, protein}) => {
   let totalCalories = (4*carbs) + (4*protein) + (9*fat);
 
+  let style = {
+    "font-size": "12px"
+  };
+
   return (
     <li>
-      <p>{name}:</p>
-      <p>-----Calories: {totalCalories}kcal   (Fat: {fat}g, Carbohydrates: {carbs}g, Protein: {protein}g)</p>
+      <p className="text-center">{name}:</p>
+      <p className="text-center">{totalCalories} kcal <span style={style}>(Fat: {fat}g, Carbohydrates: {carbs}g, Protein: {protein}g)</span></p>
     </li>
   )
 }

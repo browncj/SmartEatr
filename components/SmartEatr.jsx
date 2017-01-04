@@ -14,11 +14,14 @@ const SmartEatr = () => {
       <div className="row medium-unstack">
         <div className="small-6 columns">
           <AddFood />
+          <hr/>
           <SetCal />
+          <hr/>
           <NewDay />
         </div>
         <div className="small-6 columns">
           <GenerateCalDisplay />
+          <hr/>
           <GenerateDayList />
         </div>
       </div>

@@ -5,7 +5,10 @@ const DayList = ({days}) => {
   return (
     <ol>
       {days.map(day=>
-        <FoodList key={day.id} {...day} />
+        <div>
+          <FoodList key={day.id} {...day} />
+          <hr/>
+        </div>
       )}
     </ol>
   );

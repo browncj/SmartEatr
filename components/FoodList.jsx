@@ -2,9 +2,21 @@ import React from 'react';
 import Food from 'Food';
 
 const FoodList = ({foods}) => {
+  if(foods.length === 0){
+    return (
+      <li>
+        <p>No food added for this day</p>
+      </li>
+    );
+  }
+
+  let style = {
+    'listStyle': 'none'
+  };
+
   return (
     <li>
-      <ul>
+      <ul style={style}>
         {foods.map(food =>
           <Food key={food.id} {...food}/>
         )}
