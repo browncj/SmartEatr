@@ -424,4 +424,99 @@ describe('days reducer', ()=>{
       expect(resultedState).toEqual(expectedState);
     });
   });
+
+  describe('SET_DAYS action type handler', () => {
+    it('should correctly set the days array when action has one', () => {
+      const daysRetrieved = [
+        {
+          id: 1,
+          foods: [
+            {
+              id: 1,
+              name: 'Chocolate Pie',
+              carbs: 24,
+              protein: 1,
+              fat: 23
+            },
+            {
+              id: 2,
+              name: 'Crisps',
+              carbs: 24,
+              protein: 1,
+              fat: 23
+            }
+          ]
+        },
+        {
+          id: 2,
+          foods: [
+            {
+              id: 5,
+              name: 'Tuna sandwich',
+              carbs: 1,
+              protein: 42,
+              fat: 0
+            },
+            {
+              id: 6,
+              name: 'Chicken sandwich',
+              carbs: 1,
+              protein: 4,
+              fat: 10
+            },
+            {
+              id: 432,
+              name: 'Candy bar',
+              carbs: 3,
+              protein: 1,
+              fat: 23
+            }
+          ]
+        },
+        {
+          id: 3,
+          foods: [
+            {
+              id: 5,
+              name: 'Light salad',
+              carbs: 12,
+              protein: 0,
+              fat: 0
+            },
+            {
+              id: 6,
+              name: 'Chicken sandwich',
+              carbs: 1,
+              protein: 4,
+              fat: 1
+            }
+          ]
+        },
+      ];
+
+      const action = {
+        type: 'SET_DAYS',
+        days: daysRetrieved
+      };
+
+      const initialState = [{id: 0, foods:[]}];
+      const resultedState = daysReducer(initialState, action);
+
+      expect(resultedState).toEqual(daysRetrieved);
+    });
+
+    it('should not change the state when days array contains nothing', () => {
+      const daysRetrieved = undefined;
+
+      const action = {
+        type: 'SET_DAYS',
+        days: daysRetrieved
+      };
+
+      const initialState = [{id: 0, foods:[]}];
+      const resultedState = daysReducer(initialState, action);
+
+      expect(resultedState).toEqual(initialState);
+    });
+  });
 });

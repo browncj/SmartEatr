@@ -22,6 +22,8 @@ const daysReducer = (state = [{id: 0, foods:[]}], action) => {
       newDays[0].foods.unshift(newFoodEntry);
 
       return newDays;
+    case 'SET_DAYS':
+      return action.days ? action.days : [{id: 0, foods:[]}];
     default:
       return state;
   }

@@ -59,4 +59,68 @@ describe('actions', () => {
     // Test that returned action has no id
     expect(returnedAction).toExcludeKey('id');
   });
+
+  it('should create an action to set the days', () => {
+    const days = [
+      {
+        id: 1,
+        foods: [
+          {
+            id: 1,
+            name: 'Chocolate Pie',
+            carbs: 24,
+            protein: 1,
+            fat: 23
+          },
+        ]
+      },
+      {
+        id: 2,
+        foods: [
+          {
+            id: 5,
+            name: 'Tuna sandwich',
+            carbs: 1,
+            protein: 42,
+            fat: 0
+          },
+          {
+            id: 6,
+            name: 'Chicken sandwich',
+            carbs: 1,
+            protein: 4,
+            fat: 10
+          },
+        ]
+      },
+      {
+        id: 3,
+        foods: [
+          {
+            id: 5,
+            name: 'Light salad',
+            carbs: 12,
+            protein: 0,
+            fat: 0
+          },
+          {
+            id: 6,
+            name: 'Chicken sandwich',
+            carbs: 1,
+            protein: 4,
+            fat: 1
+          }
+        ]
+      },
+    ];
+
+    const expectedAction = {
+      type: 'SET_DAYS',
+      days
+    };
+
+    const returnedAction = actions.setDays(days);
+
+    expect(expectedAction).toEqual(returnedAction);
+  });
 });

@@ -18,6 +18,14 @@ export const nextDay = () => {
   }
 };
 
+// For retrieving days array from storage
+export const setDays = (days) => {
+  return {
+    type: 'SET_DAYS',
+    days
+  }
+}
+
 export const setCalorieGoal = (goal) => {
   return {
     type: 'SET_CALORIE_GOAL',
