@@ -34,7 +34,8 @@ let AddFood = React.createClass({
     } else if (!validNumberInputs) {
       alert('Please ensure that all macronutrient entries are valid numbers');
     } else {
-      this.props.dispatch(addFood(nameInput, fatInput, carbsInput, proteinInput));
+      this.props.dispatch(addFood(nameInput, parseInt(fatInput),
+      parseInt(carbsInput), parseInt(proteinInput)));
     }
   },
   render: function(){

@@ -3,7 +3,7 @@ import NewDay from 'NewDay';
 import SetCal from 'SetCal';
 import AddFood from 'AddFood';
 import GenerateCalDisplay from 'GenerateCalDisplay';
-import DayList from 'DayList';
+import GenerateDayList from 'GenerateDayList';
 
 const SmartEatr = () => {
   let days = [
@@ -79,7 +79,7 @@ const SmartEatr = () => {
       <AddFood />
       <SetCal />
       <GenerateCalDisplay />
-      <DayList days={days}/>
+      <GenerateDayList />
     </div>
   );
 };
