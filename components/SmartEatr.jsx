@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from 'NavBar';
 import NewDay from 'NewDay';
+import SaveControls from 'SaveControls';
 import SetCal from 'SetCal';
 import AddFood from 'AddFood';
 import GenerateCalDisplay from 'GenerateCalDisplay';
@@ -18,6 +19,8 @@ const SmartEatr = () => {
           <SetCal />
           <hr/>
           <NewDay />
+          <hr />
+          <SaveControls />
         </div>
         <div className="small-6 columns">
           <GenerateCalDisplay />
