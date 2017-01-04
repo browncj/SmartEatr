@@ -41,6 +41,8 @@ try {
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
+require('style!css!./styles/index.css');
+
 ReactDOM.render(
   <Provider store={store}>
     <SmartEatr/>

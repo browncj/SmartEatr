@@ -9,14 +9,10 @@ const FoodList = ({foods}) => {
       </li>
     );
   }
-
-  let style = {
-    'listStyle': 'none'
-  };
-
+  
   return (
     <li>
-      <ul style={style}>
+      <ul className="foodList">
         {foods.map(food =>
           <Food key={food.id} {...food}/>
         )}
