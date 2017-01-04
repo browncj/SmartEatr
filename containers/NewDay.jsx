@@ -10,8 +10,9 @@ let newDay = React.createClass({
   render: function(){
     return (
       <div>
+        <h4>Go to next day</h4>
         <form onSubmit={this.handleClick}>
-          <button className="button">New day</button>
+          <button className="button expanded">New day</button>
         </form>
       </div>
     )

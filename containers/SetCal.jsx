@@ -24,9 +24,17 @@ let setCal = React.createClass({
   render: function(){
     return (
       <div>
+        <h4>Update calorie goal</h4>
         <form onSubmit={this.handleUpdate}>
-          <input type="text" ref="calText" placeholder="Enter new calorie goal"/>
-          <button className="button">Update calorie goal</button>
+          <div className="row">
+            <div className="small-4 columns">
+              <button className="button expanded">Update</button>
+            </div>
+            <div className="small-8 columns">
+              <input type="number" ref="calText" placeholder="Enter new goal"/>
+            </div>
+
+          </div>
         </form>
       </div>
     );

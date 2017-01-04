@@ -41,12 +41,25 @@ let AddFood = React.createClass({
   render: function(){
     return (
       <div>
+        <h4>Add a new food</h4>
         <form onSubmit={this.handleUpdate}>
-          <input type="text" ref="name" placeholder="Enter food name"/>
-          <input type="text" ref="protein" placeholder="Enter protein (g)"/>
-          <input type="text" ref="fat" placeholder="Enter fat (g)"/>
-          <input type="text" ref="carbs" placeholder="Enter carbs (g)"/>
-          <button className="button">Add new food</button>
+          <div className="row">
+            <input type="text" ref="name" placeholder="Food name"/>
+          </div>
+          <div className="row">
+            <div className="small-4 columns">
+              <input type="number" ref="protein" placeholder="Enter protein (g)"/>
+            </div>
+            <div className="small-4 columns">
+              <input type="number" ref="fat" placeholder="Enter fat (g)"/>
+            </div>
+            <div className = "small-4 columns">
+              <input type="number" ref="carbs" placeholder="Enter carbs (g)"/>
+            </div>
+          </div>
+          <div className="row">
+            <button className="button expanded">Submit</button>
+          </div>
         </form>
       </div>
     );

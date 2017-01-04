@@ -11,11 +11,17 @@ const SmartEatr = () => {
   return (
     <div>
       <NavBar />
-      <NewDay />
-      <AddFood />
-      <SetCal />
-      <GenerateCalDisplay />
-      <GenerateDayList />
+      <div className="row medium-unstack">
+        <div className="small-6 columns">
+          <AddFood />
+          <SetCal />
+          <NewDay />
+        </div>
+        <div className="small-6 columns">
+          <GenerateCalDisplay />
+          <GenerateDayList />
+        </div>
+      </div>
     </div>
   );
 };
