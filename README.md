@@ -6,4 +6,4 @@ Primarily developed using [React](https://facebook.github.io/react/) to render t
 
 This is a work in progress. Feel free to contact me with any suggested features. Planned updates include mobile support, an independent cloud backend (such as Firebase) as well as possible integration with React Native.
 
-Check out the live preview at [Heroku](smarteatr.herokuapp.com).
+Check out the live preview at [Heroku](http://smarteatr.herokuapp.com/).
